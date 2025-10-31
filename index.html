@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jayanth</title>
+    <link
+      rel="stylesheet"
+      href="/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+        background-color: blanchedalmond;
+      }
+
+      h3 {
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      #panel1 {
+        display: grid;
+        float: left;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+        height: 70vh;
+
+        padding: 40px;
+        border-radius: 2px;
+      }
+      #panel1.img {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 10px;
+
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      img.potrait {
+        display: flex;
+
+        position: relative;
+        clip-path: inset(0% 0% 0% 0%);
+        animation: moveRight 3s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+      }
+
+      img.landscape {
+        display: flex;
+
+        position: relative;
+        clip-path: inset(0% 0% 0% 0%);
+        animation: movetopbottom 3s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+      }
+
+      @keyframes movetopbottom {
+        0% {
+          clip-path: inset(0 0 100% 0);
+          opacity: 1;
+        }
+
+        80% {
+          clip-path: inset(0 0 0 0);
+          opacity: 1;
+        }
+
+        100% {
+          clip-path: inset(100% 0 0 0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes moveRight {
+        0% {
+          clip-path: inset(0 100% 0 0);
+          opacity: 1;
+        }
+
+        80% {
+          clip-path: inset(0 0 0 0);
+          opacity: 1;
+        }
+
+        100% {
+          clip-path: inset(0 0 0 100%);
+          opacity: 0;
+        }
+      }
+      :root {
+        --bs-carousel-transition-duration: 2s;
+      }
+      .carousel-control-next-icon {
+        background-color: #000;
+        display: flex;
+        position: static;
+        margin-top: 50vh;
+        margin-right: 0px;
+      }
+      .carousel-control-prev-icon {
+        background-color: #000;
+        color: #000;
+        display: flex;
+        position: static;
+        margin-top: 50vh;
+        margin-right: 0px;
+      }
+      .carousel-indicators {
+        visibility: hidden;
+        position: static;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .carousel-indicators [data-bs-target] {
+        width: 40px;
+        height: 40px;
+        background: #ccc;
+        border-radius: 50%;
+        border: none;
+        font-weight: bold;
+        text-indent: 0;
+        color: #000;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-caption {
+        color: black;
+        font-family: Cambria, Cochin, Georgia, serif;
+        position: static !important;
+        margin-top: 20vh;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3 class="heading"><i>Jayanth Gallery</i></h3>
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div id="panel1" class="">
+            <img
+              src="/portofolio/vlad-d-u3QyQwZEywQ-unsplash.jpg"
+              alt="Jayanth Image 1"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/keegan-houser--Q_t4SCN8c4-unsplash.jpg"
+              alt="Jayanth Image 2"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/Potrait/brandon-stoll-CTmfoFHTH1w-unsplash.jpg"
+              alt="Jayanth Image 3"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/Potrait/heloise-delbos-Bxp_AyY5TbU-unsplash.jpg"
+              alt="Jayanth Image 4"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/Assets/Image/Potrait/job-vermeulen-8xCTIfyzx4o-unsplash.jpg"
+              alt="Jayanth Image 5"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/kirill-shavlo-eDguN_ifJjA-unsplash.jpg"
+              alt="Jayanth Image 6"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/kristen-p-2iKUFvdIeis-unsplash.jpg"
+              alt="Jayanth Image 7"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/Potrait/rhen-davis-vRGcWjx2hwo-unsplash.jpg"
+              alt="Jayanth Image 8"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>1</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div id="panel1" class="">
+            <img
+              src="/portofolio/vlad-d-u3QyQwZEywQ-unsplash.jpg"
+              alt="Jayanth Image 1"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/keegan-houser--Q_t4SCN8c4-unsplash.jpg"
+              alt="Jayanth Image 2"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/Potrait/brandon-stoll-CTmfoFHTH1w-unsplash.jpg"
+              alt="Jayanth Image 3"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/Potrait/heloise-delbos-Bxp_AyY5TbU-unsplash.jpg"
+              alt="Jayanth Image 4"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/Assets/Image/Potrait/job-vermeulen-8xCTIfyzx4o-unsplash.jpg"
+              alt="Jayanth Image 5"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/kirill-shavlo-eDguN_ifJjA-unsplash.jpg"
+              alt="Jayanth Image 6"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/kristen-p-2iKUFvdIeis-unsplash.jpg"
+              alt="Jayanth Image 7"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/Potrait/rhen-davis-vRGcWjx2hwo-unsplash.jpg"
+              alt="Jayanth Image 8"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>2</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div id="panel1" class="">
+            <img
+              src="/portofolio/vlad-d-u3QyQwZEywQ-unsplash.jpg"
+              alt="Jayanth Image 1"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/keegan-houser--Q_t4SCN8c4-unsplash.jpg"
+              alt="Jayanth Image 2"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/Potrait/brandon-stoll-CTmfoFHTH1w-unsplash.jpg"
+              alt="Jayanth Image 3"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/Potrait/heloise-delbos-Bxp_AyY5TbU-unsplash.jpg"
+              alt="Jayanth Image 4"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/Assets/Image/Potrait/job-vermeulen-8xCTIfyzx4o-unsplash.jpg"
+              alt="Jayanth Image 5"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/kirill-shavlo-eDguN_ifJjA-unsplash.jpg"
+              alt="Jayanth Image 6"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/kristen-p-2iKUFvdIeis-unsplash.jpg"
+              alt="Jayanth Image 7"
+              class="landscape"
+              width="300"
+              height="200"
+            />
+            <img
+              src="/portofolio/Potrait/rhen-davis-vRGcWjx2hwo-unsplash.jpg"
+              alt="Jayanth Image 8"
+              class="potrait"
+              width="300"
+              height="200"
+            />
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>3</h5>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <script src="/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
